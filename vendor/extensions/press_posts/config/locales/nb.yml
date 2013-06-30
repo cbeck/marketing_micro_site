@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      press_posts:
+        title: Press Posts
+    press_posts:
+      admin:
+        press_posts:
+          actions:
+            create_new: Lag en ny Press Post
+            reorder: Endre rekkefølgen på Press Posts
+            reorder_done: Ferdig å endre rekkefølgen Press Posts
+          records:
+            title: Press Posts
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Press Posts enda. Klikk på "Lag en ny Press Post" for å legge til din første press post.
+          press_post:
+            view_live_html: Vis hvordan denne press post ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne press post
+            delete: Fjern denne press post permanent
+      press_posts:
+        show:
+          other: Andre Press Posts
+  activerecord:
+    attributes:
+      'refinery/press_posts/press_post':
+        name: Name
+        url: Url
+        description: Description
+        image: Image

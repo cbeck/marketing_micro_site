@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      press_posts:
+        title: Press Posts
+    press_posts:
+      admin:
+        press_posts:
+          actions:
+            create_new: Add New Press Post
+            reorder: Reorder Press Posts
+            reorder_done: Done Reordering Press Posts
+          records:
+            title: Press Posts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Press Posts yet. Click "Add New Press Post" to add your first press post.
+          press_post:
+            view_live_html: View this press post live <br/><em>(opens in a new window)</em>
+            edit: Edit this press post
+            delete: Remove this press post forever
+      press_posts:
+        show:
+          other: Other Press Posts
+  activerecord:
+    attributes:
+      'refinery/press_posts/press_post':
+        name: Name
+        url: Url
+        description: Description
+        image: Image

@@ -1,0 +1,33 @@
+fr:
+  refinery:
+    plugins:
+      community_posts:
+        title: Community Posts
+    community_posts:
+      admin:
+        community_posts:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Community Post
+            reorder: Réordonner les Community Posts
+            reorder_done: Fin de réordonnancement des Community Posts
+          records:
+            title: Community Posts
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Community Post. Cliquer sur "Créer un(e) nouve(au/l/lle) Community Post" pour créer votre premi(er/ère) community post.'
+          community_post:
+            view_live_html: Voir ce(t/tte) community post <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) community post
+            delete: Supprimer définitivement ce(t/tte) community post
+      community_posts:
+        show:
+          other: Autres Community Posts
+  activerecord:
+    attributes:
+      'refinery/community_posts/community_post':
+        blog_name: Blog Name
+        blog_url: Blog Url
+        author_name: Author Name
+        author_twitter_name: Author Twitter Name
+        description: Description
+        article_url: Article Url
+        author_image: Author Image

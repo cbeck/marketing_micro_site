@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::CommunityPosts::Admin::CommunityPostsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.community_posts_admin_community_posts_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_community_posts_admin_community_post_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::CommunityPosts::Admin::CommunityPostsController.sortable? && ::Refinery::CommunityPosts::CommunityPost.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Community Posts"),
+                 refinery.community_posts_admin_community_posts_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Community Posts"),
+                 refinery.community_posts_admin_community_posts_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

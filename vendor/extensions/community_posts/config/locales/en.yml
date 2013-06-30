@@ -1,0 +1,33 @@
+en:
+  refinery:
+    plugins:
+      community_posts:
+        title: Community Posts
+    community_posts:
+      admin:
+        community_posts:
+          actions:
+            create_new: Add New Community Post
+            reorder: Reorder Community Posts
+            reorder_done: Done Reordering Community Posts
+          records:
+            title: Community Posts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Community Posts yet. Click "Add New Community Post" to add your first community post.
+          community_post:
+            view_live_html: View this community post live <br/><em>(opens in a new window)</em>
+            edit: Edit this community post
+            delete: Remove this community post forever
+      community_posts:
+        show:
+          other: Other Community Posts
+  activerecord:
+    attributes:
+      'refinery/community_posts/community_post':
+        blog_name: Blog Name
+        blog_url: Blog Url
+        author_name: Author Name
+        author_twitter_name: Author Twitter Name
+        description: Description
+        article_url: Article Url
+        author_image: Author Image

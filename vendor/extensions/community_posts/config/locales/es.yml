@@ -1,0 +1,34 @@
+es:
+  refinery:
+    plugins:
+      community_posts:
+        title: Community Posts
+#        article: masculino/femenino
+    community_posts:
+      admin:
+        community_posts:
+          actions:
+            create_new: Crear nuevo community post
+            reorder: Reordenar community posts
+            reorder_done: Reordenación de community posts completada
+          records:
+            title: Community Posts
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay community posts todavía. Pulsa en "Crear nuevo Community Post" para crear tu primer community post.
+          community_post:
+            view_live_html: Ver este community post como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este community post
+            delete: Borrar este community post para siempre
+      community_posts:
+        show:
+          other: Otros community posts
+  activerecord:
+    attributes:
+      'refinery/community_posts/community_post':
+        blog_name: Blog Name
+        blog_url: Blog Url
+        author_name: Author Name
+        author_twitter_name: Author Twitter Name
+        description: Description
+        article_url: Article Url
+        author_image: Author Image

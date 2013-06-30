@@ -1,0 +1,133 @@
+<div id="header">
+  <div class="container_12 relative">
+    <div class="grid_4 alpha" id="logo">
+      <a href="http://www.awesomeupstander.com"><h1>Awesome Upstander!</h1></a>
+    </div>
+    <div class="grid_6 prefix_2 omega" id="app_store">
+      <h5>Now available on iPhone, iPad and Android!</h5>
+      <span>Download it now:</span>
+      <a href="http://hlth.tc/upstander-game" target="_app_store"><%= image_tag "btn_app_store.png"%></a>
+      <a href="http://hlth.tc/upstanders-game" target="_app_store"><%= image_tag "btn_android.png"%></a>
+    </div>
+    <%=raw @page.content_for(:header) %> 
+    <div class="grid_8 omega">
+      <div id="video_frame">
+        <object width="590" height="360">
+          <param name="movie" value="https://www.youtube.com/v/dVoAndq2LCQ"></param>
+          <param name="allowFullScreen" value="true"></param>
+          <param name="allowScriptAccess" value="always"></param>
+          <embed src="https://www.youtube.com/v/dVoAndq2LCQ" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="590" height="360"></embed>
+        </object>
+      </div>
+    </div>   
+  </div>
+</div>
+<div id="transition">
+  <div class="container_12 relative">
+    <div class="prefix_2 grid_10 alpha omega">
+      <%= image_tag "girl.png", :id => "girl" %>
+      <h3>You're an Upstander if...</h3>
+      <div class="flexslider">
+        <ul class="slides">
+          <%=raw @page.content_for(:upstanderlist) %> 
+       </ul>          
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content">
+  <div class="container_12" id="community_posts">
+    <div class="grid_12 alpha omega"><h3>From the Community</h3></div>
+    <% community_posts = Refinery::CommunityPosts::CommunityPost.all %>
+    <% cols = community_posts.size < 2 ? 1 : community_posts.size/2 %>
+    <% community_posts.in_groups_of(cols) do |group| %>
+      <div class="grid_6 alpha">        
+        <div class="brown_box">
+          <ul class="community_post_list">
+            <% group.each_with_index do |community_post, index| %>
+              <% 
+                classname = case index 
+                when 0 
+                 "alpha"
+                when group.size - 1
+                 "omega"
+                else
+                 ""
+                end
+              %>
+              <%= render "community_post", :community_post => community_post, :classname => classname %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="container_12" id="play_dates">
+    <div class="grid_12 alpha omega">
+      <h3>Spreading the Word: Host an Awesome Upstander! Play Date in Your Neighborhood</h3>
+    </div>
+    <div class="grid_4 alpha">
+      <div class="flexslider">
+        <ul id='gallery' class="slides">
+          <% @page.images.each do |image| %>
+            <li>
+              <%= link_to image_tag(image.thumbnail("250x187#c").url), image.thumbnail("500x375").url %>
+            </li>
+         <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="grid_8 omega">
+      <p>HealthTeacher has been on the road, introducing Awesome Upstander! to classrooms and communities across the country. Our in-school events have been so educational and engaging, we were inspired to help you set up your own “play date” at home for your kids and their friends. This exercise can be an effective and fun way to tackle a serious and difficult subject with the kids you care about.</p>
+      <% pdf = Refinery::Resource.last %>
+      <p><a href="<%= pdf.url %>">Download a step by step guide</a> for hosting an awesome experience for Upstanders in your community.</p>
+    </div>
+  </div>
+  <div class="container_12">
+    <div class="grid_12 alpha omega" id="press">
+      <h3>Awesome Upstander in the Press</h3>
+      <ul id="press_list">
+        <% Refinery::PressPosts::PressPost.all.each do |press_post| %>
+          <%= render "press_post", :press_post => press_post %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="container_12">
+    <div class="grid_7 alpha" id="tweets">
+      <h3>AwesomeUpstander Tweets</h3>          
+      <div class="tweet">          
+      </div>
+      <p class="pull_up">Tell us what you think it means to be an 
+      Upstander by tweeting to us <a href="https://twitter.com/upstandergame/" target="_social">@UpstanderGame</a>.
+      Together, we can end #bullying.</p>      
+    </div>
+    <div class="grid_5 omega">
+        <a href="http://hlth.tc/upstander-game " target="_app_store"><%= image_tag "kids.png" %></a>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container_12">
+    <div class="grid_4 suffix_8 alpha">
+      <h6>Spread the word!</h6>
+            <p>Help us stop bullying by spreading the word about the game on your favorite social sites. </p>
+            <ul id="social_list">          
+              <li>
+                <a href="https://twitter.com/upstandergame/" target="_social"><%= image_tag "icon_twitter.png" %></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/awesomeupstander/" target="_social"><%= image_tag "icon_fb.png" %></a>
+              </li>
+              <li>
+                <a href="http://pinterest.com/youthhealth/" target="_social"><%= image_tag "icon_pin.png" %></a>
+              </li>
+            </ul>
+    </div>
+  </div>
+  <div class="container_12" id="bottom_rail">
+    <div class="grid_12 alpha">
+      <p>Awesome Upstander! is powered by <a href="http://www.healthteacher.com/" target="_blank">HealthTeacher</a>. | <a href="http://www.healthteacher.com/pages/privacy/" target="_blank">Privacy Policy</a> | <a href="http://www.healthteacher.com/pages/legal/" target="_blank">Terms of Service</a></p>
+    </div>
+  </div>
+</div>

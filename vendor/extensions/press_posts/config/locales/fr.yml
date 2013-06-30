@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      press_posts:
+        title: Press Posts
+    press_posts:
+      admin:
+        press_posts:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Press Post
+            reorder: Réordonner les Press Posts
+            reorder_done: Fin de réordonnancement des Press Posts
+          records:
+            title: Press Posts
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Press Post. Cliquer sur "Créer un(e) nouve(au/l/lle) Press Post" pour créer votre premi(er/ère) press post.'
+          press_post:
+            view_live_html: Voir ce(t/tte) press post <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) press post
+            delete: Supprimer définitivement ce(t/tte) press post
+      press_posts:
+        show:
+          other: Autres Press Posts
+  activerecord:
+    attributes:
+      'refinery/press_posts/press_post':
+        name: Name
+        url: Url
+        description: Description
+        image: Image

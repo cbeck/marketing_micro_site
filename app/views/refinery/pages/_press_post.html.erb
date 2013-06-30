@@ -1,0 +1,5 @@
+<li>
+  <%= image_fu press_post.image if press_post.image.present? %>
+  <p class="attribution"><a href="<%= press_post.url %>"><%= press_post.name %></a></p>
+  <%= press_post.description.html_safe %>
+</li>

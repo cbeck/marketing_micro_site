@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      press_posts:
+        title: Press Posts
+    press_posts:
+      admin:
+        press_posts:
+          actions:
+            create_new: Maak een nieuwe Press Post
+            reorder: Wijzig de volgorde van de Press Posts
+            reorder_done: Klaar met het wijzingen van de volgorde van de Press Posts
+          records:
+            title: Press Posts
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Press Posts. Druk op 'Maak een nieuwe Press Post' om de eerste aan te maken.
+          press_post:
+            view_live_html: Bekijk deze press post op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze press post
+            delete: Verwijder deze press post voor eeuwig
+      press_posts:
+        show:
+          other: Andere Press Posts
+  activerecord:
+    attributes:
+      'refinery/press_posts/press_post':
+        name: Name
+        url: Url
+        description: Description
+        image: Image

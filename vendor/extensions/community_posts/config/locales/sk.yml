@@ -1,0 +1,33 @@
+sk:
+  refinery:
+    plugins:
+      community_posts:
+        title: Community Posts
+    community_posts:
+      admin:
+        community_posts:
+          actions:
+            create_new: Pridať Community Post
+            reorder: Preusporiadať Community Posts
+            reorder_done: Koniec radenia Community Posts
+          records:
+            title: Community Posts
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Community Posts. Kliknite na "Pridať Community Post" pre pridanie prvého community post.
+          community_post:
+            view_live_html: Zobraziť náhľad community post<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť community post
+            delete: Zmazať community post
+      community_posts:
+        show:
+          other: Daľšie Community Posts
+  activerecord:
+    attributes:
+      'refinery/community_posts/community_post':
+        blog_name: Blog Name
+        blog_url: Blog Url
+        author_name: Author Name
+        author_twitter_name: Author Twitter Name
+        description: Description
+        article_url: Article Url
+        author_image: Author Image

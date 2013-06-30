@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      press_posts:
+        title: Press Posts
+    press_posts:
+      admin:
+        press_posts:
+          actions:
+            create_new: Pridať Press Post
+            reorder: Preusporiadať Press Posts
+            reorder_done: Koniec radenia Press Posts
+          records:
+            title: Press Posts
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Press Posts. Kliknite na "Pridať Press Post" pre pridanie prvého press post.
+          press_post:
+            view_live_html: Zobraziť náhľad press post<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť press post
+            delete: Zmazať press post
+      press_posts:
+        show:
+          other: Daľšie Press Posts
+  activerecord:
+    attributes:
+      'refinery/press_posts/press_post':
+        name: Name
+        url: Url
+        description: Description
+        image: Image

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<%= render '/refinery/head' %>
+<body>
+  <%= site_bar -%>
+  
+  <%= yield %>
+  
+  <!-- javascripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
+  <%= javascript_include_tag "jquery.flexslider-min.js" %>
+  <%= javascript_include_tag "jquery.easing.1.3.js" %>
+  <%= javascript_include_tag "jquery.nav.min.js" %>
+  <%= javascript_include_tag "jquery.cycle.all.js" %>
+  <%= javascript_include_tag "jquery.lightbox-0.5.min.js" %>  
+  <script type="text/javascript" src="//www.hellobar.com/hellobar.js"></script>
+  <script>
+    new HelloBar(54417,78118);
+  </script>
+  <%= javascript_include_tag "jquery.tweet.js" %>
+  <script>
+    jQuery(function($){
+        $(".tweet").tweet({
+            username: "UpstanderGame",
+            avatar_size: 32,
+            count: 4,
+            loading_text: "loading tweets...",
+            refresh_interval: 60
+        });
+    });
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2133718-16']);
+      _gaq.push(['_setDomainName', 'awesomeupstander.com']);
+      _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <%= javascript_include_tag "site.js" %>
+
+</body>
+</html>

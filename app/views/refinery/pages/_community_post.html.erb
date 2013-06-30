@@ -1,0 +1,9 @@
+<% classname ||= "" %>
+<% unless community_post.blank? %>
+  <li class="<%= classname %>">
+    <%= image_fu community_post.author_image %>
+    <h4><a href="<%= community_post.blog_url %>" target="_blogger"><%= community_post.blog_name %></a></h4>
+    <p class="attribution"><%= community_post.author_name %>, <%= community_post.author_twitter_name %></p>
+    <p><%= community_post.description.html_safe %> <a href="<%= community_post.article_url%>" target="_blogger">read more</a></p>
+  </li>
+<% end %>

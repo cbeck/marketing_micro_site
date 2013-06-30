@@ -1,0 +1,33 @@
+nb:
+  refinery:
+    plugins:
+      community_posts:
+        title: Community Posts
+    community_posts:
+      admin:
+        community_posts:
+          actions:
+            create_new: Lag en ny Community Post
+            reorder: Endre rekkefølgen på Community Posts
+            reorder_done: Ferdig å endre rekkefølgen Community Posts
+          records:
+            title: Community Posts
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Community Posts enda. Klikk på "Lag en ny Community Post" for å legge til din første community post.
+          community_post:
+            view_live_html: Vis hvordan denne community post ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne community post
+            delete: Fjern denne community post permanent
+      community_posts:
+        show:
+          other: Andre Community Posts
+  activerecord:
+    attributes:
+      'refinery/community_posts/community_post':
+        blog_name: Blog Name
+        blog_url: Blog Url
+        author_name: Author Name
+        author_twitter_name: Author Twitter Name
+        description: Description
+        article_url: Article Url
+        author_image: Author Image
